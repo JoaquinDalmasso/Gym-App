@@ -3,6 +3,7 @@ import {useLocalSearchParams} from 'expo-router'
 import exercises from '../../assets/data/exercises.json'
 import {Stack} from 'expo-router'
 import { useState } from 'react'
+import NewSetInput from '../components/NewSetInput'
 
 export default function ExerciseDetailsScreen(){
     const [isInstructionExpanded, setIsInstructionExpanded] = useState(false)
@@ -32,6 +33,8 @@ export default function ExerciseDetailsScreen(){
                 </Text>
                 <Text onPress={() => setIsInstructionExpanded(!isInstructionExpanded)} style={styles.seeMore}>{isInstructionExpanded ? 'See less' : 'See more'}</Text>
             </View>
+
+            <NewSetInput/>
         </ScrollView>
     )
 }
